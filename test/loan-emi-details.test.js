@@ -6,5 +6,5 @@ describe('Loan EMI details', () => {
   it('should test loan emi details', async () => {
     const el = await fixture(html` <loanemi-details></loanemi-details>`);
     await expect(el).to.be.accessible();
-  });
+  });    
 });

@@ -7,5 +7,5 @@ describe('loan-header', () => {
   it('should run loan header', async () => {
     const el = await fixture(html` <loan-header></loan-header>`);
     await expect(el).to.be.accessible();
-  });
+  }); 
 });

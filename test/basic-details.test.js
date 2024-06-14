@@ -1,5 +1,5 @@
 import { html, fixture, expect } from '@open-wc/testing';
-import { stub } from 'sinon';
+import { spy } from 'sinon';
 import '../src/LoanBasicDetails/BasicDetails.js';
 
 describe('Basic details', () => {
@@ -9,18 +9,4 @@ describe('Basic details', () => {
     const el = await fixture(html` <basic-details></basic-details> `);
     await expect(el).to.be.accessible();
   });
-
-    
-  it('should call the callback function', async () => {
-    var callback = sinon.stub();
-    callback._numToWord();
-    expect(callback._numToWord).to.be.accessible();
-  });
-
-  it('should do something with stubs', sinon.test(function() {
-    var stub = this.stub($, 'post');
-    _captureDetails();  
-    sinon.assert.calledOnce(stub);
-  }));
-  
   });

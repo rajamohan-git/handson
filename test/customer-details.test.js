@@ -7,5 +7,5 @@ describe('customer details', () => {
   it('should render customer details', async () => {
     const el = await fixture(html` <customer-details></customer-details> `);
     await expect(el).to.be.accessible();
-  });
+  }); 
 });
