@@ -6,5 +6,17 @@ describe('Loan EMI details', () => {
   it('should test loan emi details', async () => {
     const el = await fixture(html` <loanemi-details></loanemi-details>`);
     await expect(el).to.be.accessible();
-  });    
+  });
+
+  it('should call _toBasicDetails ',() => {
+    var spy = sinon.spy("_toBasicDetails");
+    _toBasicDetails();
+    expect(spy).called();
+  });
+
+  it('should call _toCustomer ',() => {
+    var spy = sinon.spy("_toCustomer");
+    _toCustomer();
+    expect(spy).called();
+  });
 });

@@ -8,4 +8,10 @@ describe('loan-header', () => {
     const el = await fixture(html` <loan-header></loan-header>`);
     await expect(el).to.be.accessible();
   }); 
+  it("should call localeChanged function", function () {
+    var callback = sinon.fake();
+    var proxy = localeChanged(callback);
+    proxy();
+    assert(callback.called);
+  });
 });
